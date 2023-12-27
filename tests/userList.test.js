@@ -1,4 +1,4 @@
-const userList = ['Nick', 'Kate', 'quest123', 'admin', 'new_user_2' ];
+const userList = ['Nick', 'Kate', 'quest123', 'admin', 'new_user_2']
 
 describe('testing userList', () => {
   test('whether the array contains the element "admin"', () => {

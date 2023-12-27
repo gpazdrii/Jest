@@ -1,15 +1,15 @@
-const foodModule = require('../functions/food')
+const { filterFoodPrice } = require('../functions/food')
 const food = [
   { kind: 'potato', price: 10 },
   { kind: 'bred', price: 16 },
   { kind: 'pepper', price: 27 },
   { kind: 'banana', price: 32 },
   { kind: 'lemon', price: 50 }
-  ]
+]
 
 describe('testing food function', () => {
   beforeEach(() => {
-    this.filteredArr = foodModule.filterFoodPrice(food, 12, 40)
+    this.filteredArr = filterFoodPrice(food, 12, 40)
   })
 
   test('whether the expected length of the sorted array 3 corresponds to the actual length', () => {
@@ -17,7 +17,7 @@ describe('testing food function', () => {
   })
 
   test('whether the sorted array contains the object { kind: "pepper", price: 27 }', () => {
-    expect(this.filteredArr).toEqual(expect.arrayContaining([{ kind: "pepper", price: 27 }]))
+    expect(this.filteredArr).toEqual(expect.arrayContaining([{ kind: 'pepper', price: 27 }]))
   })
 
   test('whether the sorted array contains 2, 3, and 4 elements of the origin', () => {
@@ -33,7 +33,7 @@ describe('testing food function', () => {
   })
 
   test('that the sorted array does not contain the element { kind: "lemon", price: 50 }', () => {
-    expect(this.filteredArr).toEqual(expect.not.arrayContaining([{ kind: "lemon", price: 50 }]))
+    expect(this.filteredArr).toEqual(expect.not.arrayContaining([{ kind: 'lemon', price: 50 }]))
   })
 
   test('whether the kind property of the 1st element of the sorted array is bred', () => {

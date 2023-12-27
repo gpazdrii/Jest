@@ -1,4 +1,4 @@
-const addition = require('../functions/addition.js')
+const { addition } = require('../functions/addition.js')
 
 describe('Testing addition function', () => {
   test('verify 0.1 adding to 0.2 is 0.3', () => {

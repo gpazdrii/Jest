@@ -1,1 +1,2 @@
 # Jest
+npm test tests
